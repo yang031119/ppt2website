@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('background2.png');
+    font-family: Arial, sans-serif;
+}
+.menu{
+    margin : 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;  /* 占据四分之一的页面宽度 */
+    height: 100%;
+}
+.submenu {
+    margin : 30px 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;  /* 占据四分之一的页面宽度 */
+    height: 100%;
+}
+.button1 {
+    left: calc(10% + 50px);
+    width: 300px; /* 控制箭头的宽度 */
+    height: 100px; /* 控制箭头的高度 */
+    background-color: #B0B0B0; /* 灰色背景 */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10%; /* 设置每个按钮的底部间距，增加按钮之间的距离 */
+}
+/*箭头是由长方形的主体和前边一个三角形拼成的*/
+.button1::before {
+    content: "";
+    position: absolute;
+    left: -48px; /* 调整箭头的左侧偏移 */
+    top: -1px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent; /* 上方透明的边框 */
+    border-bottom: 50px solid transparent; /* 下方透明的边框 */
+    border-right: 50px solid #B0B0B0; /* 右侧灰色的边框形成箭头 */
+    cursor: pointer;
+}
+.button1:hover {
+    background-color: #A0A0A0; /* 鼠标悬停时的背景颜色 */
+
+}
+.button1:hover::before {
+    border-right-color: #A0A0A0; /* 鼠标悬停时的箭头颜色 */
+}
+.button2 {
+    width: 100%;  /* 按钮占据父容器的宽度 */
+    height: 100px;
+    margin: 10px 0;
+    background-size: contain;  /* 调整背景图片显示比例 */
+    background-position: center;
+    background-repeat: no-repeat;  /* 防止背景图片重复 */
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 10px;
+    background-color: #007BFF;
+}
+.button2:hover {
+    background-color: #0056b3;
+}
