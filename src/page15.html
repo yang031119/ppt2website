@@ -8,30 +8,95 @@
     <link rel="stylesheet" href="page15.css">
 </head>
 <body>
+    <button class="button" onclick="window.location.href='guide.html'">返回</button>
+    <div class="cal">
+        <button class="calculate" onclick='calculate()'>计算所需用弹量</button>
+        <div class="ans">枚</div>
+    </div>
     <div class="textcutton">
         <div id="title">武器选择</div>
-        <div id="country">国家：</div>
-        <select id="country-select">
-            <option value="china">中国</option>
-            <option value="usa">美国</option>
-            <option value="japan">日本</option>
-            <option value="germany">德国</option>
-        </select>
-        <div id="zidan">子弹：</div>
-        <div id="cep">CEP：</div>
-        <div id="banjing">毁伤半径/m：</div>
-        <div id="mingzhong">平均必须命中弹数:</div>
+        
+        <div class="form-group">
+            <label id="country">国家：</label>
+            <select id="country-select">
+                <option value="china">中国</option>
+                <option value="usa">美国</option>
+                <option value="japan">日本</option>
+                <option value="germany">德国</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label id="zidan">子弹：</label>
+            <input type="text" id="zidan-input">
+        </div>
+        
+        <div class="form-group">
+            <label id="cep">CEP：</label>
+            <input type="text" id="cep-input">
+        </div>
+        
+        <div class="form-group">
+            <label id="banjing">毁伤半径/m：</label>
+            <input type="text" id="banjing-input">
+        </div>
+        
+        <div class="form-group">
+            <label id="mingzhong">平均必须命中弹数:</label>
+            <input type="text" id="mingzhong-input">
+        </div>
     </div>
+    
     <div class="textcutton">
         <div id="title">目标及瞄准点</div>
-        <div id="country">目标类型：</div>
-        <div id="zidan">目标材质：</div>
-        <div id="cep">
-            <div id="">目标尺寸：</div>
-            <div id="">长/m：</div>
-            <div id="">宽/m：</div>
-            <div id="">高/m：</div>
+        
+        <div class="form-group">
+            <label id="target-type">目标类型：</label>
+            <select id="target-type-select">
+                <option value="china">中国</option>
+                <option value="usa">美国</option>
+                <option value="japan">日本</option>
+                <option value="germany">德国</option>
+            </select>
         </div>
-        <div id="mingzhong">瞄准定位置：</div>
+        
+        <div class="form-group">
+            <label id="material">目标材质：</label>
+            <select id="target-material-select">
+                <option value="china">中国</option>
+                <option value="usa">美国</option>
+                <option value="japan">日本</option>
+                <option value="germany">德国</option>
+            </select>
+        </div>
+        
+        <div id="size">
+            <div class="form-group">
+                <label>目标尺寸：</label>
+            </div>
+            <div class="form-group">
+                <label class="subtitle">长/m：</label>
+                <input type="text" id="length-input">
+            </div>
+            <div class="form-group">
+                <label class="subtitle">宽/m：</label>
+                <input type="text" id="width-input">
+            </div>
+            <div class="form-group">
+                <label class="subtitle">高/m：</label>
+                <input type="text" id="height-input">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label id="miaozhun">瞄准定位置：</label>
+            <select id="aiming-position-select">
+                <option value="china">中国</option>
+                <option value="usa">美国</option>
+                <option value="japan">日本</option>
+                <option value="germany">德国</option>
+            </select>
+        </div>
     </div>
+    
 </body>
