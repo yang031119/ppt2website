@@ -1,24 +1,107 @@
 body {
-    background-image: url('pic/background2.png'); 
+    margin: 5% 10%;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('pic/background3.png');
     background-size: cover;
     background-position: center;
-    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
     color: white;
-    justify-content: space-between;
 }
-.button {
-    height : 10%;
-    width : 15%;
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.return {
+    height : auto;
+    width:auto;
     position: absolute;
     bottom: 20px;
     right: 20px;
     margin: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
     color: white;
-    border: none;
+    background-color: transparent; 
     border-radius: 5px;
+    border: 5px solid white; 
+    border-style: double;
+    border-width: thick;
     cursor: pointer;
     font-size: 24px;
     transition: transform 0.1s ease-in-out;
+}
+.form-group {
+    left : 100px;
+}
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+input[type="text"], select {
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+select {
+    appearance: none; 
+    background-image: url('pic/arrow.png'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+select option {
+    color: black; 
+}
+.button-group {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.button-group button {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 5px solid white;
+    border-style: double;
+    text-align: left;
+    cursor: pointer;
+}
+.button-group button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.image-placeholder {
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
+}
+#image{
+    display: none;
+    transform-origin: bottom left;
+    
+    transition: none; /* 禁用可能的默认过渡效果 */   
+}
+.expand-animation {
+    animation: expandClip 0.5s ease-in-out forwards;
+}
+
+@keyframes expandClip {
+    0% {
+        clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%); /* 初始状态，完全隐藏 */
+    }
+    100% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); /* 最终状态，显示整个图片 */
+    }
 }

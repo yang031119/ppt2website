@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="page15.css">
 </head>
 <body>
-    <button class="button" onclick="window.location.href='guide.html'">返回</button>
-    <div class="cal">
-        <button class="calculate" onclick='calculate()'>计算所需用弹量</button>
-        <div class="ans">枚</div>
-    </div>
-    <div class="textcutton">
+    
+    <div id="shuqian"><pre>  </pre>已知弹药性能，<br>求用弹量</div>    
+    <div class="textcutton" id="frame1">
         <div id="title">武器选择</div>
         
         <div class="form-group">
@@ -47,7 +44,7 @@
         </div>
     </div>
     
-    <div class="textcutton">
+    <div class="textcutton" id="frame2">
         <div id="title">目标及瞄准点</div>
         
         <div class="form-group">
@@ -98,5 +95,10 @@
             </select>
         </div>
     </div>
-    
+    <div class="cal">
+        <button class="calculate" onclick='calculate()'>计算所需用弹量</button>
+        <div class="ans"></div>
+    </div>
+    <button class="button" onclick="window.location.href='guide.html'">返回</button>
+    <script src="page15.js"></script>
 </body>

@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>目录</title>
-    <link rel="stylesheet" href="page15.css">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="page16.css">
 </head>
 <body>
-    <button class="button" onclick="window.location.href='guide.html'">返回</button>
+    <script src="page16.js"></script>
+    <button class="return" onclick="window.location.href='guide.html'">返回</button>
+    <div class="container">
+        <div class="form-group">
+            <label for="type">弹药:</label>
+            <select id="type">
+                <option value="type1">Type 1</option>
+                <option value="type2">Type 2</option>
+                <option value="type3">Type 3</option>
+            </select>
+            <label for="quantity">用弹量:</label>
+            <input type="text" id="quantity">
+            <label for="length">目标尺寸: 长/m:</label>
+            <input type="text" id="length">
+            <label for="width">宽/m:</label>
+            <input type="text" id="width">
+        </div>
+        <div class="button-group">
+            <div>
+                <button onclick="showpic(1)">单次仿真模拟</button>
+                <button onclick="showpic(2)">2000次仿真模拟完成任务概率趋势统计</button>
+                <button onclick="showpic(3)">2000次仿真模拟附带损伤趋势统计</button>
+            </div>
+            <div class="image-placeholder">
+                <img src="image.png" alt="image" id="image">
+                
+            </div>
+        </div>
+    </div>
 </body>
+</html>
